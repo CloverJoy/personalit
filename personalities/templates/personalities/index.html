@@ -1,0 +1,18 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th>Type Chars</th>
+            <th>Name</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for personality in personalities %}
+        <tr>
+            <td>{{ personality.mbtitype }}</td>
+            <td>{{ personality.name }}</td>
+            <td>{{ personality.description }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>

@@ -8,8 +8,8 @@ from .models import Personality
 def index(request):
     # select * from personalities_personality
     personalities = Personality.objects.all()
-    output = ', '.join([p.name for p in personalities])
+    # output = ', '.join([p.name for p in personalities])
     # WHERE
     # .objects.filter(personality=)
     # .objects.get(id=1)
-    return HttpResponse(output)
+    return render(request, 'personalities/index.html', {'personalities': personalities})
