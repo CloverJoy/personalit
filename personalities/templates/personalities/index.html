@@ -1,4 +1,7 @@
-<table class="table">
+{% extends 'base.html' %}
+
+{% block content %}
+<table class="table table-bordered table-hover">
     <thead>
         <tr>
             <th>Type Chars</th>
@@ -16,3 +19,4 @@
         {% endfor %}
     </tbody>
 </table>
+{% endblock %}
