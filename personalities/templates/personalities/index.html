@@ -12,7 +12,11 @@
     <tbody>
         {% for personality in personalities %}
         <tr>
-            <td>{{ personality.mbtitype }}</td>
+            <td>
+            <a href="{% url 'personality:detail' personality.mbtitype %}">
+                {{ personality.mbtitype }}
+            </a>   
+            </td>
             <td>{{ personality.name }}</td>
             <td>{{ personality.description }}</td>
         </tr>

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <dl>
+        <dd>name</dd>
+        <dl>{{personality.name}}</dl>
+        <dd>type</dd>
+        <dl>{{personality.mbtitype}}</dl>
+        <dd>description</dd>
+        <dl>{{personality.description}}</dl>
+    </dl>
+
+{% endblock %}

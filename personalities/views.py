@@ -1,5 +1,5 @@
-from django.http import HttpResponse
-from django.shortcuts import render
+from django.http import HttpResponse, Http404
+from django.shortcuts import render, get_object_or_404
 from .models import Personality
 
 # Create your views here.
@@ -13,3 +13,14 @@ def index(request):
     # .objects.filter(personality=)
     # .objects.get(id=1)
     return render(request, 'personalities/index.html', {'personalities': personalities})
+
+
+def detail(request, personality_mbtitype):
+    personality = get_object_or_404(Personality, mbtitype=personality_mbtitype)
+    return render(request, 'personalities/detail.html', {'personality': personality})
+
+    # try:
+    #     personality = Personality.objects.get(mbtitype=personality_mbtitype)
+    #     return render(request, 'personalities/detail.html', {'personality': personality})
+    # except Personality.DoesNotExist:
+    #     raise Http404()
