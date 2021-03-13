@@ -15,8 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from api.models import PersonalityResource
+
+personality_resource = PersonalityResource()
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('personalities/', include('personalities.urls'))
+    path('personalities/', include('personalities.urls')),
+    path('api/', include(personality_resource.urls))
 ]
