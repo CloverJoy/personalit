@@ -1,1 +1,1 @@
-#personalit
+Django project 
