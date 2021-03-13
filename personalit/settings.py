@@ -26,7 +26,8 @@ SECRET_KEY = 'd$^c(yz^02z!_&byl10o%=)fr-(!d+xbw&m#-pw551ans*@gp('
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'damp-headland-51635.herokuapp.com'
+    'damp-headland-51635.herokuapp.com',
+    'localhost'
 ]
 
 
